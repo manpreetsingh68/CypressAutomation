@@ -1,0 +1,19 @@
+{
+  "projectId": "oyz951",
+  "defaultCommandTimeout": 8000,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+      "reporterEnabled": "mochawesome",
+      "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  },
+  "env":{
+    "baseURL":"https://rahulshettyacademy.com"
+    }
+  }
+

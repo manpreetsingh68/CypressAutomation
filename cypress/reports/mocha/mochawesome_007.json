@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-14T16:55:57.331Z",
+    "end": "2021-09-14T16:56:09.768Z",
+    "duration": 12437,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "84c66b7c-5a82-4daf-afb8-45706c821f07",
+      "title": "",
+      "fullFile": "cypress/integration/8_EndToEndTest_Framework.js",
+      "file": "cypress/integration/8_EndToEndTest_Framework.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cf112e09-4b3b-4d47-bf74-7b00fcd9a865",
+          "title": "My End to End test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My End to End test case",
+              "fullTitle": "My End to End test suite My End to End test case",
+              "timedOut": null,
+              "duration": 10557,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.config('defaultCommandTimeout', 8000);\nconst homePage = new _HomePage.default();\nconst productPage = new _ProductPage.default();\nconst checkoutPage = new _CheckoutPage.default();\ncy.visit(Cypress.env('baseURL') + '/angularpractice/');\nhomePage.getName().type(this.data.name);\nhomePage.getEmail().type(this.data.email);\nhomePage.getGender().select(this.data.gender);\nhomePage.getTwoWayDataBinding().should('have.value', this.data.name);\nhomePage.getName().should('have.attr', 'minlength', '2');\nhomePage.getEntrepreneurRadio().should('be.disabled');\nhomePage.getShop().click();\nthis.data.productName.forEach(element => {\n  cy.selectProduct(element);\n});\nproductPage.getCheckoutBtn().click();\ncheckoutPage.getCheckoutBtn().click();\ncheckoutPage.getSearchShippingCountry().type('India');\ncheckoutPage.getShippingCountry().click();\ncheckoutPage.getCheckTerms().click({\n  force: true\n});\ncheckoutPage.getPurchaseBtn().click();\ncheckoutPage.getSuccessMessage().should('include.text', 'Success');",
+              "err": {},
+              "uuid": "24d81ce8-ddc5-4b91-9b06-eb13001a3d14",
+              "parentUUID": "cf112e09-4b3b-4d47-bf74-7b00fcd9a865",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "24d81ce8-ddc5-4b91-9b06-eb13001a3d14"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10557,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
