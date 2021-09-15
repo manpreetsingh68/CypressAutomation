@@ -12,6 +12,7 @@
       "json": true
     }
   },
+  "testFiles": "**/*.feature",
   "env":{
     "baseURL":"https://rahulshettyacademy.com"
     },
