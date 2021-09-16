@@ -12,7 +12,8 @@
     "posttest": "npm run combine-reports && npm run generate-report",
     "test": "npm run scripts || npm run posttest",
     "testDashboard": "./node_modules/.bin/cypress run --record --key 501ca09e-26fb-4d11-9214-03e49ccd4e58",
-    "testHeadedChrome": "./node_modules/.bin/cypress run --headed --browser chrome"
+    "testHeadedChrome": "./node_modules/.bin/cypress run --headed --browser chrome",
+    "testCucumberBDD": "./node_modules/.bin/cypress run --spec cypress/integration/BDD/*.feature --headed --browser chrome && node cucumber-html-report.js"
   },
   "author": "Manpreet Singh",
   "license": "ISC",
