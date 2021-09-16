@@ -17,7 +17,13 @@
   "author": "Manpreet Singh",
   "license": "ISC",
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   },
   "devDependencies": {
     "cypress": "^8.3.1",
@@ -27,6 +33,7 @@
     "mocha": "^5.2.0",
     "mochawesome": "^4.0.1",
     "mochawesome-merge": "^4.0.1",
-    "mochawesome-report-generator": "^4.0.1"
+    "mochawesome-report-generator": "^4.0.1",
+    "multiple-cucumber-html-reporter": "^1.18.0"
   }
 }
