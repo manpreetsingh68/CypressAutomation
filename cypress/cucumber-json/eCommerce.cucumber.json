@@ -28,7 +28,7 @@
             "name": "User is on ecommerce website homepage",
             "result": {
               "status": "passed",
-              "duration": 2387000000
+              "duration": 1562000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "User click on Shop tab from Menu bar",
             "result": {
               "status": "passed",
-              "duration": 2832000000
+              "duration": 2500000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "User add few products in the Cart",
             "result": {
               "status": "passed",
-              "duration": 1738000000
+              "duration": 1103000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "User select the country and click on Checkout",
             "result": {
               "status": "passed",
-              "duration": 6172000000
+              "duration": 5944000000
             }
           },
           {
@@ -68,7 +68,7 @@
             "name": "User should see Success message",
             "result": {
               "status": "passed",
-              "duration": 135000000
+              "duration": 72000000
             }
           }
         ]
@@ -93,7 +93,7 @@
             "name": "User is on ecommerce website homepage",
             "result": {
               "status": "passed",
-              "duration": 982000000
+              "duration": 611000000
             }
           },
           {
@@ -122,7 +122,7 @@
             "name": "User enter the details in form",
             "result": {
               "status": "passed",
-              "duration": 1137000000
+              "duration": 1009000000
             }
           },
           {
@@ -132,7 +132,7 @@
             "name": "Do the form field validations",
             "result": {
               "status": "passed",
-              "duration": 923000000
+              "duration": 440000000
             }
           }
         ]

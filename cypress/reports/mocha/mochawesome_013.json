@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
+    "tests": 1,
     "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2021-09-15T12:13:25.273Z",
-    "end": "2021-09-15T12:14:04.123Z",
-    "duration": 38850,
-    "testsRegistered": 2,
-    "passPercent": 50,
+    "failures": 0,
+    "start": "2021-09-17T05:05:36.594Z",
+    "end": "2021-09-17T05:05:41.216Z",
+    "duration": 4622,
+    "testsRegistered": 1,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,73 +18,49 @@
   },
   "results": [
     {
-      "uuid": "12098bf1-936a-4636-8a62-fdd61e8e9732",
+      "uuid": "47f48c70-c4f8-470b-a4be-e3de013d9897",
       "title": "",
-      "fullFile": "cypress/integration/BDD/eCommerce.feature",
-      "file": "cypress/integration/BDD/eCommerce.feature",
+      "fullFile": "cypress/integration/InterceptAPI_Response.js",
+      "file": "cypress/integration/InterceptAPI_Response.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "a9f938f8-00b1-4f69-94e1-aaeeb0946a6d",
-          "title": "End to End validation of ECommerce site",
+          "uuid": "ca478ea9-8965-46c7-b960-ced86f8d12f5",
+          "title": "Intercept API scenario for Response",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "ECommerce product ordering validation",
-              "fullTitle": "End to End validation of ECommerce site ECommerce product ordering validation",
+              "title": "Intercept API test for Response",
+              "fullTitle": "Intercept API scenario for Response Intercept API test for Response",
               "timedOut": null,
-              "duration": 18495,
+              "duration": 2393,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "code": "cy.visit('https://rahulshettyacademy.com/angularAppdemo/');\ncy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  statusCode: 200,\n  body: [{\n    \"book_name\": \"RestAssured with Java\",\n    \"isbn\": \"RSU\",\n    \"aisle\": \"2301\"\n  }]\n}).as('booksRetrieval');\ncy.get('.btn.btn-primary').click();\ncy.wait('@booksRetrieval').should(function (_ref) {\n  var request = _ref.request,\n      response = _ref.response;\n  cy.get('tr').should('have.length', response.body.length + 1);\n});\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
               "err": {},
-              "uuid": "229f46f2-24cc-4d6c-aca1-98c3bd4d4925",
-              "parentUUID": "a9f938f8-00b1-4f69-94e1-aaeeb0946a6d",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "ECommerce form fill validation",
-              "fullTitle": "End to End validation of ECommerce site ECommerce form fill validation",
-              "timedOut": null,
-              "duration": 3480,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
-              "err": {
-                "message": "TypeError: Cannot read properties of undefined (reading 'rawTable')",
-                "estack": "TypeError: Cannot read properties of undefined (reading 'rawTable')\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\BDD\\eCommerce.feature:90:66)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\BDD\\eCommerce.feature:10715:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\BDD\\eCommerce.feature:10036:35)",
-                "diff": null
-              },
-              "uuid": "ccb3ae9f-fe6c-48a1-8fd7-4a233ccf5b3e",
-              "parentUUID": "a9f938f8-00b1-4f69-94e1-aaeeb0946a6d",
+              "uuid": "ed5dd21c-3c38-48b9-a9f1-4666f0e2d8ae",
+              "parentUUID": "ca478ea9-8965-46c7-b960-ced86f8d12f5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "229f46f2-24cc-4d6c-aca1-98c3bd4d4925"
+            "ed5dd21c-3c38-48b9-a9f1-4666f0e2d8ae"
           ],
-          "failures": [
-            "ccb3ae9f-fe6c-48a1-8fd7-4a233ccf5b3e"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 21975,
+          "duration": 2393,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

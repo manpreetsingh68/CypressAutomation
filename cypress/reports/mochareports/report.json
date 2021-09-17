@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 8,
-    "tests": 8,
-    "passes": 8,
+    "suites": 12,
+    "tests": 13,
+    "passes": 13,
     "pending": 0,
     "failures": 0,
-    "start": "2021-09-14T16:53:14.964Z",
-    "end": "2021-09-14T16:56:09.768Z",
-    "duration": 74697,
-    "testsRegistered": 8,
+    "start": "2021-09-17T05:01:10.616Z",
+    "end": "2021-09-17T05:05:41.216Z",
+    "duration": 93241,
+    "testsRegistered": 13,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,413 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f63f86b4-e830-4e60-b731-799080b0bc3f",
-      "title": "",
-      "fullFile": "cypress/integration/2_SecondTest.js",
-      "file": "cypress/integration/2_SecondTest.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "80064609-0a2c-4612-9de0-576e7a7a2258",
-          "title": "My second test suite",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "My second test case",
-              "fullTitle": "My second test suite My second test case",
-              "timedOut": null,
-              "duration": 7867,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('input.search-keyword').type('ca');\ncy.wait(2000);\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').each(($el, index, $list) => {\n  const text = $el.find('h4.product-name').text();\n  if (text.includes('Cashews')) {\n    $el.find('button').trigger(\"click\");\n  }\n});\ncy.get('.cart-icon > img').click();\ncy.contains('PROCEED TO CHECKOUT').click();\ncy.wait(1000);\ncy.contains('Place Order').click();",
-              "err": {},
-              "uuid": "ceddffbd-2090-4c7a-84b7-c5e36b880e80",
-              "parentUUID": "80064609-0a2c-4612-9de0-576e7a7a2258",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "ceddffbd-2090-4c7a-84b7-c5e36b880e80"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 7867,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "b201fca0-d450-45e9-bcdf-1c3f01891134",
-      "title": "",
-      "fullFile": "cypress/integration/3_ThirdTest.js",
-      "file": "cypress/integration/3_ThirdTest.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "4f15cc95-4d46-4646-ad6d-6ec04016e0dd",
-          "title": "My third test suite",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "My third test case",
-              "fullTitle": "My third test suite My third test case",
-              "timedOut": null,
-              "duration": 9495,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\"); //Checkboxes\ncy.get('#checkBoxOption1').check().should('be.checked');\ncy.get('#checkBoxOption1').uncheck().should('not.be.checked');\ncy.get('input[type=\"checkbox\"]').check(['option2', 'option3']); //Static dropdown\ncy.get('#dropdown-class-example').select('option3').should('have.value', 'option3'); //Dynamic dropdown\ncy.get('input#autocomplete').type('ind');\ncy.get('.ui-menu-item > div').each(($el, index, $list) => {\n  if ($el.text() === 'India') {\n    $el.trigger('click');\n  }\n});\ncy.get('input#autocomplete').should('have.value', 'India');\ncy.get('#displayed-text').should('be.visible');\ncy.get('#hide-textbox').click();\ncy.get('#displayed-text').should('not.be.visible');\ncy.get('#show-textbox').click();\ncy.get('#displayed-text').should('be.visible');",
-              "err": {},
-              "uuid": "88f34783-2654-4477-8465-8e7c77a15072",
-              "parentUUID": "4f15cc95-4d46-4646-ad6d-6ec04016e0dd",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "88f34783-2654-4477-8465-8e7c77a15072"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 9495,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "6583eade-1090-4d57-84d1-540509cab805",
-      "title": "",
-      "fullFile": "cypress/integration/4_FourthTest.js",
-      "file": "cypress/integration/4_FourthTest.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "0609442a-f0b6-4bc3-9c08-952a01f75992",
-          "title": "My fourth test suite",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "My fourth test case",
-              "fullTitle": "My fourth test suite My fourth test case",
-              "timedOut": null,
-              "duration": 15441,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\"); //Alerts\ncy.get('#alertbtn').click();\ncy.get('#confirmbtn').click();\ncy.on('window:alert', str => {\n  expect(str).to.equal('Hello , share this practice page and share your knowledge');\n});\ncy.on('window:confirm', str => {\n  expect(str).to.equal('Hello , Are you sure you want to confirm?');\n}); //Handle new window popup \ncy.get('#opentab').invoke('removeAttr', 'target').click();\ncy.url().should('include', 'rahulshettyacademy');\ncy.go('back');\ncy.url().should('include', 'rahulshettyacademy');\ncy.go('forward');\ncy.url().should('include', 'rahulshettyacademy');",
-              "err": {},
-              "uuid": "220835c5-7372-4df6-b155-0ae76ac561b6",
-              "parentUUID": "0609442a-f0b6-4bc3-9c08-952a01f75992",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "220835c5-7372-4df6-b155-0ae76ac561b6"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 15441,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "848d0efc-dc9b-4342-9829-c3a2bf49f42d",
-      "title": "",
-      "fullFile": "cypress/integration/5_FifthTest.js",
-      "file": "cypress/integration/5_FifthTest.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "2a17e586-ba9e-4825-9a82-e141d7352b41",
-          "title": "My fifth test suite",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "My fifth test case",
-              "fullTitle": "My fifth test suite My fifth test case",
-              "timedOut": null,
-              "duration": 7279,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\"); //Handle dynamic tables\ncy.get('table[name=\"courses\"] > tbody > tr > td:nth-child(2)').each(($el, index, $list) => {\n  const courseText = $el.text();\n  if (courseText.includes('JMETER')) {\n    cy.get('table[name=\"courses\"] > tbody > tr > td:nth-child(2)').eq(index).next().then(function (price) {\n      const priceText = price.text();\n      expect(priceText).to.equal('25');\n    });\n  }\n}); //Mouse hover event\n//cy.get('.mouse-hover-content').invoke('show') //Jquery function\ncy.contains('Top').click({\n  force: true\n});\ncy.url().should('include', 'top'); //To grab any property from DOM\ncy.get('#opentab').then(function (ele) {\n  const href = ele.prop('href'); //Jquery function\n  cy.log(href);\n});",
-              "err": {},
-              "uuid": "fdd75c01-948e-42c5-8d5e-b2c5264891ee",
-              "parentUUID": "2a17e586-ba9e-4825-9a82-e141d7352b41",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "fdd75c01-948e-42c5-8d5e-b2c5264891ee"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 7279,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "a733ce97-c2e0-4c58-9289-a17d7bb98356",
-      "title": "",
-      "fullFile": "cypress/integration/6_SixthTest.js",
-      "file": "cypress/integration/6_SixthTest.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "2e93ab23-02f4-4761-8de6-05ae3295e9ae",
-          "title": "My sixth test suite",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "My sixth test case",
-              "fullTitle": "My sixth test suite My sixth test case",
-              "timedOut": null,
-              "duration": 8470,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\"); //Handling frames\ncy.frameLoaded('#courses-iframe');\ncy.iframe().find('a[href*=\"mentorship\"]').eq(0).click();\ncy.iframe().find('h1[class*=\"pricing-title\"]').should('have.length', 2);",
-              "err": {},
-              "uuid": "6e1b1d0d-f6f9-4d28-9144-1d58b931f328",
-              "parentUUID": "2e93ab23-02f4-4761-8de6-05ae3295e9ae",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "6e1b1d0d-f6f9-4d28-9144-1d58b931f328"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 8470,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "6dde7064-c74a-4801-b883-0edb61ae9ed1",
-      "title": "",
-      "fullFile": "cypress/integration/7_SeventhTest_Framework.js",
-      "file": "cypress/integration/7_SeventhTest_Framework.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "60b65a6d-e6d7-452d-97fb-517d724944d4",
-          "title": "My Seventh_framework test suite",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "My Seventh_framework test case",
-              "fullTitle": "My Seventh_framework test suite My Seventh_framework test case",
-              "timedOut": null,
-              "duration": 6839,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(Cypress.env('baseURL') + '/angularpractice/');\ncy.get('input[name=\"name\"]').eq(0).type(this.data.name);\ncy.get('input[name=\"email\"]').type(this.data.email);\ncy.get('#exampleFormControlSelect1').select(this.data.gender);\ncy.get('input[name=\"name\"]').eq(1).should('have.value', this.data.name);\ncy.get('input[name=\"name\"]').eq(0).should('have.attr', 'minlength', '2');\ncy.get('#inlineRadio3').should('be.disabled');\ncy.contains('Shop').click();\nthis.data.productName.forEach(element => {\n  cy.selectProduct(element);\n});",
-              "err": {},
-              "uuid": "11fd98bd-cbc7-499d-ba0f-6137996d1bc4",
-              "parentUUID": "60b65a6d-e6d7-452d-97fb-517d724944d4",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "11fd98bd-cbc7-499d-ba0f-6137996d1bc4"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 6839,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "84c66b7c-5a82-4daf-afb8-45706c821f07",
-      "title": "",
-      "fullFile": "cypress/integration/8_EndToEndTest_Framework.js",
-      "file": "cypress/integration/8_EndToEndTest_Framework.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "cf112e09-4b3b-4d47-bf74-7b00fcd9a865",
-          "title": "My End to End test suite",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "My End to End test case",
-              "fullTitle": "My End to End test suite My End to End test case",
-              "timedOut": null,
-              "duration": 10557,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "Cypress.config('defaultCommandTimeout', 8000);\nconst homePage = new _HomePage.default();\nconst productPage = new _ProductPage.default();\nconst checkoutPage = new _CheckoutPage.default();\ncy.visit(Cypress.env('baseURL') + '/angularpractice/');\nhomePage.getName().type(this.data.name);\nhomePage.getEmail().type(this.data.email);\nhomePage.getGender().select(this.data.gender);\nhomePage.getTwoWayDataBinding().should('have.value', this.data.name);\nhomePage.getName().should('have.attr', 'minlength', '2');\nhomePage.getEntrepreneurRadio().should('be.disabled');\nhomePage.getShop().click();\nthis.data.productName.forEach(element => {\n  cy.selectProduct(element);\n});\nproductPage.getCheckoutBtn().click();\ncheckoutPage.getCheckoutBtn().click();\ncheckoutPage.getSearchShippingCountry().type('India');\ncheckoutPage.getShippingCountry().click();\ncheckoutPage.getCheckTerms().click({\n  force: true\n});\ncheckoutPage.getPurchaseBtn().click();\ncheckoutPage.getSuccessMessage().should('include.text', 'Success');",
-              "err": {},
-              "uuid": "24d81ce8-ddc5-4b91-9b06-eb13001a3d14",
-              "parentUUID": "cf112e09-4b3b-4d47-bf74-7b00fcd9a865",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "24d81ce8-ddc5-4b91-9b06-eb13001a3d14"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 10557,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "4b5d48fa-747a-4a41-87d7-0f8345a2461f",
+      "uuid": "7c76db46-fc45-4963-9711-211dd079f817",
       "title": "",
       "fullFile": "cypress/integration/1_FirstTest.js",
       "file": "cypress/integration/1_FirstTest.js",
@@ -433,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dac5e621-ffa4-48e0-b109-9254881af484",
+          "uuid": "75cc0d42-2756-4744-9a46-b12f2de49c28",
           "title": "My first test suite",
           "fullFile": "",
           "file": "",
@@ -444,29 +38,686 @@
               "title": "My first test case",
               "fullTitle": "My first test suite My first test case",
               "timedOut": null,
-              "duration": 8749,
+              "duration": 7471,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('input.search-keyword').type('ca');\ncy.wait(2000);\ncy.get('.product:visible').should('have.length', 4);\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').eq(1).contains('ADD TO CART').click();\ncy.get('@productLocator').find('.product').each(($el, index, $list) => {\n  const text = $el.find('h4.product-name').text();\n  if (text.includes('Cashews')) {\n    $el.find('button').click();\n  }\n});\ncy.get('.brand.greenLogo').should('have.text', 'GREENKART');\ncy.get('.brand.greenLogo').then(function (logo) {\n  cy.log(logo.text());\n}); //const logo = cy.get('.brand.greenLogo')\n//cy.log(logo.text())",
+              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('input.search-keyword').type('ca');\ncy.wait(2000);\ncy.get('.product:visible').should('have.length', 4);\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').eq(1).contains('ADD TO CART').click();\ncy.get('@productLocator').find('.product').each(function ($el, index, $list) {\n  var text = $el.find('h4.product-name').text();\n  if (text.includes('Cashews')) {\n    $el.find('button').click();\n  }\n});\ncy.get('.brand.greenLogo').should('have.text', 'GREENKART');\ncy.get('.brand.greenLogo').then(function (logo) {\n  cy.log(logo.text());\n}); //const logo = cy.get('.brand.greenLogo')\n//cy.log(logo.text())",
               "err": {},
-              "uuid": "2b09248d-52c7-43f2-a1d1-4fac4454ac5b",
-              "parentUUID": "dac5e621-ffa4-48e0-b109-9254881af484",
+              "uuid": "5c3b1800-70b9-4820-b549-d5eb0a99f50b",
+              "parentUUID": "75cc0d42-2756-4744-9a46-b12f2de49c28",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2b09248d-52c7-43f2-a1d1-4fac4454ac5b"
+            "5c3b1800-70b9-4820-b549-d5eb0a99f50b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8749,
+          "duration": 7471,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cbebb852-5860-425f-bddc-50f77bc41107",
+      "title": "",
+      "fullFile": "cypress/integration/2_SecondTest.js",
+      "file": "cypress/integration/2_SecondTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7666c713-1642-42d2-ba18-7e829e459225",
+          "title": "My second test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My second test case",
+              "fullTitle": "My second test suite My second test case",
+              "timedOut": null,
+              "duration": 12199,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('input.search-keyword').type('ca');\ncy.wait(2000);\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').each(function ($el, index, $list) {\n  var text = $el.find('h4.product-name').text();\n  if (text.includes('Cashews')) {\n    $el.find('button').trigger(\"click\");\n  }\n});\ncy.get('.cart-icon > img').click();\ncy.contains('PROCEED TO CHECKOUT').click();\ncy.wait(1000);\ncy.contains('Place Order').click();",
+              "err": {},
+              "uuid": "552c2f14-228c-4c95-a2e5-eb1abd85beed",
+              "parentUUID": "7666c713-1642-42d2-ba18-7e829e459225",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "552c2f14-228c-4c95-a2e5-eb1abd85beed"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12199,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "dc6dc937-47a3-4e6f-b47d-1f35250540eb",
+      "title": "",
+      "fullFile": "cypress/integration/3_ThirdTest.js",
+      "file": "cypress/integration/3_ThirdTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f841223e-20e2-41cc-8f1c-9415c009a6a7",
+          "title": "My third test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My third test case",
+              "fullTitle": "My third test suite My third test case",
+              "timedOut": null,
+              "duration": 10520,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\"); //Checkboxes\ncy.get('#checkBoxOption1').check().should('be.checked');\ncy.get('#checkBoxOption1').uncheck().should('not.be.checked');\ncy.get('input[type=\"checkbox\"]').check(['option2', 'option3']); //Static dropdown\ncy.get('#dropdown-class-example').select('option3').should('have.value', 'option3'); //Dynamic dropdown\ncy.get('input#autocomplete').type('ind');\ncy.get('.ui-menu-item > div').each(function ($el, index, $list) {\n  if ($el.text() === 'India') {\n    $el.trigger('click');\n  }\n});\ncy.get('input#autocomplete').should('have.value', 'India');\ncy.get('#displayed-text').should('be.visible');\ncy.get('#hide-textbox').click();\ncy.get('#displayed-text').should('not.be.visible');\ncy.get('#show-textbox').click();\ncy.get('#displayed-text').should('be.visible');",
+              "err": {},
+              "uuid": "e9986b55-0449-4e2f-9807-451641387272",
+              "parentUUID": "f841223e-20e2-41cc-8f1c-9415c009a6a7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e9986b55-0449-4e2f-9807-451641387272"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10520,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "151c61e5-625f-4d10-9375-eb23cd3cdf9e",
+      "title": "",
+      "fullFile": "cypress/integration/4_FourthTest.js",
+      "file": "cypress/integration/4_FourthTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e7838364-f7d2-428a-96ff-2a6ec4fb6079",
+          "title": "My fourth test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My fourth test case",
+              "fullTitle": "My fourth test suite My fourth test case",
+              "timedOut": null,
+              "duration": 14393,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\"); //Alerts\ncy.get('#alertbtn').click();\ncy.get('#confirmbtn').click();\ncy.on('window:alert', function (str) {\n  expect(str).to.equal('Hello , share this practice page and share your knowledge');\n});\ncy.on('window:confirm', function (str) {\n  expect(str).to.equal('Hello , Are you sure you want to confirm?');\n}); //Handle new window popup \ncy.get('#opentab').invoke('removeAttr', 'target').click();\ncy.url().should('include', 'rahulshettyacademy');\ncy.go('back');\ncy.url().should('include', 'rahulshettyacademy');\ncy.go('forward');\ncy.url().should('include', 'rahulshettyacademy');",
+              "err": {},
+              "uuid": "50bd5935-33a1-4d18-bcd5-965436d1c5ac",
+              "parentUUID": "e7838364-f7d2-428a-96ff-2a6ec4fb6079",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "50bd5935-33a1-4d18-bcd5-965436d1c5ac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14393,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "139236a0-381c-477a-ae90-d8c549a963d4",
+      "title": "",
+      "fullFile": "cypress/integration/5_FifthTest.js",
+      "file": "cypress/integration/5_FifthTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d3c205c5-f793-4f59-be81-f44c178753aa",
+          "title": "My fifth test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My fifth test case",
+              "fullTitle": "My fifth test suite My fifth test case",
+              "timedOut": null,
+              "duration": 6663,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\"); //Handle dynamic tables\ncy.get('table[name=\"courses\"] > tbody > tr > td:nth-child(2)').each(function ($el, index, $list) {\n  var courseText = $el.text();\n  if (courseText.includes('JMETER')) {\n    cy.get('table[name=\"courses\"] > tbody > tr > td:nth-child(2)').eq(index).next().then(function (price) {\n      var priceText = price.text();\n      expect(priceText).to.equal('25');\n    });\n  }\n}); //Mouse hover event\n//cy.get('.mouse-hover-content').invoke('show') //Jquery function\ncy.contains('Top').click({\n  force: true\n});\ncy.url().should('include', 'top'); //To grab any property from DOM\ncy.get('#opentab').then(function (ele) {\n  var href = ele.prop('href'); //Jquery function\n  cy.log(href);\n});",
+              "err": {},
+              "uuid": "669dd04d-8ab4-4baf-854d-584239a6c9d8",
+              "parentUUID": "d3c205c5-f793-4f59-be81-f44c178753aa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "669dd04d-8ab4-4baf-854d-584239a6c9d8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6663,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "947d20f2-87e5-4da1-85f4-7a4365f0b540",
+      "title": "",
+      "fullFile": "cypress/integration/6_SixthTest.js",
+      "file": "cypress/integration/6_SixthTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "31e79249-ee76-403d-868c-ed28d27194a4",
+          "title": "My sixth test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My sixth test case",
+              "fullTitle": "My sixth test suite My sixth test case",
+              "timedOut": null,
+              "duration": 7609,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\"); //Handling frames\ncy.frameLoaded('#courses-iframe');\ncy.iframe().find('a[href*=\"mentorship\"]').eq(0).click();\ncy.iframe().find('h1[class*=\"pricing-title\"]').should('have.length', 2);",
+              "err": {},
+              "uuid": "a5dcd4c8-522b-417d-8e58-cb7cf6f32475",
+              "parentUUID": "31e79249-ee76-403d-868c-ed28d27194a4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a5dcd4c8-522b-417d-8e58-cb7cf6f32475"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7609,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0b9b2d4b-b2ae-44d4-aca8-c926d30792d7",
+      "title": "",
+      "fullFile": "cypress/integration/7_SeventhTest_Framework.js",
+      "file": "cypress/integration/7_SeventhTest_Framework.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c860544a-6a7c-43bc-bc19-1487fcdf4912",
+          "title": "My Seventh_framework test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My Seventh_framework test case",
+              "fullTitle": "My Seventh_framework test suite My Seventh_framework test case",
+              "timedOut": null,
+              "duration": 6767,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('baseURL') + '/angularpractice/');\ncy.get('input[name=\"name\"]').eq(0).type(this.data.name);\ncy.get('input[name=\"email\"]').type(this.data.email);\ncy.get('#exampleFormControlSelect1').select(this.data.gender);\ncy.get('input[name=\"name\"]').eq(1).should('have.value', this.data.name);\ncy.get('input[name=\"name\"]').eq(0).should('have.attr', 'minlength', '2');\ncy.get('#inlineRadio3').should('be.disabled');\ncy.contains('Shop').click();\nthis.data.productName.forEach(function (element) {\n  cy.selectProduct(element);\n});",
+              "err": {},
+              "uuid": "833921df-ec8a-44f5-bec8-f0e96c0e9f93",
+              "parentUUID": "c860544a-6a7c-43bc-bc19-1487fcdf4912",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "833921df-ec8a-44f5-bec8-f0e96c0e9f93"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6767,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "229bbd23-904c-4dab-87d1-cb5f2c81722b",
+      "title": "",
+      "fullFile": "cypress/integration/8_EndToEndTest_Framework.js",
+      "file": "cypress/integration/8_EndToEndTest_Framework.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "146edf94-304d-4777-830e-953bab98db2b",
+          "title": "My End to End test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My End to End test case",
+              "fullTitle": "My End to End test suite My End to End test case",
+              "timedOut": null,
+              "duration": 10589,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.config('defaultCommandTimeout', 8000);\nvar homePage = new _HomePage[\"default\"]();\nvar productPage = new _ProductPage[\"default\"]();\nvar checkoutPage = new _CheckoutPage[\"default\"]();\ncy.visit(Cypress.env('baseURL') + '/angularpractice/');\nhomePage.getName().type(this.data.name);\nhomePage.getEmail().type(this.data.email);\nhomePage.getGender().select(this.data.gender);\nhomePage.getTwoWayDataBinding().should('have.value', this.data.name);\nhomePage.getName().should('have.attr', 'minlength', '2');\nhomePage.getEntrepreneurRadio().should('be.disabled');\nhomePage.getShop().click();\nthis.data.productName.forEach(function (element) {\n  cy.selectProduct(element);\n});\nproductPage.getCheckoutBtn().click();\ncheckoutPage.getCheckoutBtn().click();\ncheckoutPage.getSearchShippingCountry().type('India');\ncheckoutPage.getShippingCountry().click();\ncheckoutPage.getCheckTerms().click({\n  force: true\n});\ncheckoutPage.getPurchaseBtn().click();\ncheckoutPage.getSuccessMessage().should('include.text', 'Success');",
+              "err": {},
+              "uuid": "400d2ca5-aa79-47cd-bf5a-ba2385b656ec",
+              "parentUUID": "146edf94-304d-4777-830e-953bab98db2b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "400d2ca5-aa79-47cd-bf5a-ba2385b656ec"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10589,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8e4b9901-3bef-4d88-82a1-f6ee3e1382f8",
+      "title": "",
+      "fullFile": "cypress/integration/APITest.js",
+      "file": "cypress/integration/APITest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1817ace8-6344-4b8f-82ee-e328302095e0",
+          "title": "API testing scenario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "API testing",
+              "fullTitle": "API testing scenario API testing",
+              "timedOut": null,
+              "duration": 453,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('POST', 'http://216.10.245.166/Library/Addbook.php', {\n  \"name\": \"Learn Appium Automation with Java\",\n  \"isbn\": \"testisbn4\",\n  \"aisle\": \"126812321\",\n  \"author\": \"Harry Potter\"\n}).then(function (response) {\n  expect(response.body).to.have.property('Msg', 'successfully added');\n  expect(response.status).to.equal(200);\n});",
+              "err": {},
+              "uuid": "1943cd0e-42dd-46df-a755-2828b5c0e3da",
+              "parentUUID": "1817ace8-6344-4b8f-82ee-e328302095e0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1943cd0e-42dd-46df-a755-2828b5c0e3da"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 453,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0609fa60-4371-4af0-aaf6-5a6a5237f1f5",
+      "title": "",
+      "fullFile": "cypress/integration/InterceptAPI_Request.js",
+      "file": "cypress/integration/InterceptAPI_Request.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3bc666ef-13dc-4478-b749-1a841a0d7dde",
+          "title": "Intercept API scenario for Request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Intercept API test for Request",
+              "fullTitle": "Intercept API scenario for Request Intercept API test for Request",
+              "timedOut": null,
+              "duration": 1158,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/angularAppdemo/');\ncy.intercept('GET', 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty', function (request) {\n  request.url = 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=malhotra';\n  request[\"continue\"](function (response) {\n    expect(response.statusCode).to.equal(200);\n  });\n}).as('dummyRequest');\ncy.get('.btn.btn-primary').click();\ncy.wait('@dummyRequest');",
+              "err": {},
+              "uuid": "358eb997-81df-4bd1-b235-da7d07030b28",
+              "parentUUID": "3bc666ef-13dc-4478-b749-1a841a0d7dde",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "358eb997-81df-4bd1-b235-da7d07030b28"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1158,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "47f48c70-c4f8-470b-a4be-e3de013d9897",
+      "title": "",
+      "fullFile": "cypress/integration/InterceptAPI_Response.js",
+      "file": "cypress/integration/InterceptAPI_Response.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ca478ea9-8965-46c7-b960-ced86f8d12f5",
+          "title": "Intercept API scenario for Response",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Intercept API test for Response",
+              "fullTitle": "Intercept API scenario for Response Intercept API test for Response",
+              "timedOut": null,
+              "duration": 2393,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/angularAppdemo/');\ncy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  statusCode: 200,\n  body: [{\n    \"book_name\": \"RestAssured with Java\",\n    \"isbn\": \"RSU\",\n    \"aisle\": \"2301\"\n  }]\n}).as('booksRetrieval');\ncy.get('.btn.btn-primary').click();\ncy.wait('@booksRetrieval').should(function (_ref) {\n  var request = _ref.request,\n      response = _ref.response;\n  cy.get('tr').should('have.length', response.body.length + 1);\n});\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
+              "err": {},
+              "uuid": "ed5dd21c-3c38-48b9-a9f1-4666f0e2d8ae",
+              "parentUUID": "ca478ea9-8965-46c7-b960-ced86f8d12f5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ed5dd21c-3c38-48b9-a9f1-4666f0e2d8ae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2393,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c72f716e-6bdd-437b-84fa-24faca38a98f",
+      "title": "",
+      "fullFile": "cypress/integration/BDD/eCommerce.feature",
+      "file": "cypress/integration/BDD/eCommerce.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "deebac1e-a392-474b-a9a4-65f850eedba9",
+          "title": "End to End validation of ECommerce site",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "ECommerce product ordering validation",
+              "fullTitle": "End to End validation of ECommerce site ECommerce product ordering validation",
+              "timedOut": null,
+              "duration": 11088,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "9744004f-5922-4680-b9c6-3c98e5bb1c45",
+              "parentUUID": "deebac1e-a392-474b-a9a4-65f850eedba9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ECommerce form fill validation",
+              "fullTitle": "End to End validation of ECommerce site ECommerce form fill validation",
+              "timedOut": null,
+              "duration": 1938,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "fffa9be8-ba43-41f0-b3ff-3077436e1333",
+              "parentUUID": "deebac1e-a392-474b-a9a4-65f850eedba9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9744004f-5922-4680-b9c6-3c98e5bb1c45",
+            "fffa9be8-ba43-41f0-b3ff-3077436e1333"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13026,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
